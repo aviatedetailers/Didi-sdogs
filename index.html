@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Didi's Dogs | Kosher Hot Dog Catering</title>
+<meta name="description" content="Didi's Dogs by Romanian — kosher hot dog truck catering for weddings, bar and bat mitzvahs, birthdays and private events.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf6ef;
+    --blue:#4a86c5;
+    --blue-dark:#1f5fa8;
+    --red:#c8333a;
+    --ink:#1d2433;
+    --muted:#5b6475;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:2px solid var(--blue)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:Lobster,cursive;font-size:1.7rem;color:var(--blue-dark);text-decoration:none}
+  .nav-btn{background:var(--red);color:var(--white);text-decoration:none;font-weight:700;padding:10px 16px;border-radius:999px;font-size:.9rem}
+
+  /* Hero */
+  .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:var(--white);
+    background:linear-gradient(180deg,rgba(15,40,80,.15) 0%,rgba(15,40,80,.85) 100%),url("truck.jpg") center/cover no-repeat,var(--blue)}
+  .hero .wrap{padding-bottom:48px;padding-top:48px}
+  .hero .by{font-family:Lobster,cursive;font-size:1.4rem;color:#ffd9da}
+  .hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3.2rem,12vw,6rem);line-height:.95;letter-spacing:1px}
+  .hero p{font-size:1.1rem;max-width:520px;margin:12px 0 22px}
+  .btn{display:inline-block;background:var(--red);color:var(--white);text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;border:none;font-size:1rem;cursor:pointer}
+  .btn:hover{filter:brightness(1.08)}
+  .kosher-badge{display:inline-block;background:var(--white);color:var(--blue-dark);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+
+  /* Sections */
+  section{padding:64px 0}
+  h2{font-family:"Bebas Neue",sans-serif;font-size:2.6rem;color:var(--blue-dark);letter-spacing:1px;line-height:1}
+  .divider{display:flex;align-items:center;gap:12px;margin:12px 0 28px}
+  .divider span{height:2px;width:60px;background:var(--blue)}
+  .divider i{width:10px;height:10px;border-radius:50%;background:var(--red)}
+  .lead{color:var(--muted);max-width:620px}
+
+  /* Events */
+  .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .card{background:var(--white);border-radius:14px;padding:22px;border:1px solid #e6dfd2}
+  .card .emoji{font-size:1.8rem}
+  .card h3{font-size:1.1rem;margin:6px 0 4px}
+  .card p{color:var(--muted);font-size:.95rem}
+
+  /* Kosher strip */
+  .strip{background:var(--blue-dark);color:var(--white);text-align:center}
+  .strip h2{color:var(--white)}
+  .strip .divider{justify-content:center}
+  .strip p{max-width:620px;margin:0 auto;opacity:.95}
+
+  /* Menu */
+  .menu{display:grid;gap:12px;margin-top:8px}
+  .item{display:flex;justify-content:space-between;gap:16px;background:var(--white);padding:16px 18px;border-radius:12px;border-left:5px solid var(--red)}
+  .item h3{font-size:1.05rem}
+  .item p{color:var(--muted);font-size:.9rem}
+  .note{color:var(--muted);font-size:.9rem;margin-top:14px}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;counter-reset:s}
+  .step{background:var(--white);border-radius:14px;padding:22px;border:1px solid #e6dfd2}
+  .step::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--blue);color:var(--white);font-weight:700;margin-bottom:8px}
+
+  /* Form */
+  form{background:var(--white);border-radius:16px;padding:22px;border:1px solid #e6dfd2;display:grid;gap:14px;max-width:640px}
+  label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
+  input,select,textarea{font:inherit;padding:12px;border:1px solid #cfc7b8;border-radius:10px;background:var(--cream);width:100%}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.row{grid-template-columns:1fr}}
+
+  /* Contact + footer */
+  .contact a{color:var(--blue-dark);font-weight:700;text-decoration:none}
+  footer{background:var(--ink);color:#c9cfdb;text-align:center;padding:28px 18px;font-size:.85rem}
+  footer .logo{color:var(--white);font-size:1.4rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">Didi's Dogs</a>
+    <a href="#book" class="nav-btn">Book Us</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="kosher-badge">✡ Certified Kosher</span>
+      <div class="by">by Romanian</div>
+      <h1>Kosher Hot Dogs<br>For Your Event</h1>
+      <p>We bring the truck to your wedding, bar or bat mitzvah, birthday, or company party. You bring the guests.</p>
+      <a href="#book" class="btn">Request a Date</a>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section>
+    <div class="wrap">
+      <h2>We Cater</h2>
+      <div class="divider"><span></span><i></i><span></span></div>
+      <div class="events">
+        <div class="card"><div class="emoji">💍</div><h3>Weddings</h3><p>A late-night favorite your guests won't forget.</p></div>
+        <div class="card"><div class="emoji">🎉</div><h3>Bar &amp; Bat Mitzvahs</h3><p>Kids and adults both line up for this one.</p></div>
+        <div class="card"><div class="emoji">🎂</div><h3>Birthdays</h3><p>Backyard parties to big milestone celebrations.</p></div>
+        <div class="card"><div class="emoji">🏢</div><h3>Corporate &amp; Community</h3><p>Office lunches, school events, shul events and more.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kosher -->
+  <section class="strip">
+    <div class="wrap">
+      <h2>100% Kosher</h2>
+      <div class="divider"><span></span><i></i><span></span></div>
+      <!-- TODO: add the certifying agency name below -->
+      <p>Our truck is kosher-certified under [KOSHER AGENCY]. We serve Romanian Kosher hot dogs, so every guest can eat with confidence.</p>
+    </div>
+  </section>
+
+  <!-- Menu (placeholder) -->
+  <section id="menu">
+    <div class="wrap">
+      <h2>The Menu</h2>
+      <div class="divider"><span></span><i></i><span></span></div>
+      <!-- TODO: replace these placeholder items with the real menu -->
+      <div class="menu">
+        <div class="item"><div><h3>Classic Dog</h3><p>Menu details coming soon.</p></div></div>
+        <div class="item"><div><h3>Specialty Dog</h3><p>Menu details coming soon.</p></div></div>
+        <div class="item"><div><h3>Sides</h3><p>Menu details coming soon.</p></div></div>
+        <div class="item"><div><h3>Drinks</h3><p>Menu details coming soon.</p></div></div>
+      </div>
+      <p class="note">Pricing depends on guest count and event. Request a date and we'll send you a quote.</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section>
+    <div class="wrap">
+      <h2>How It Works</h2>
+      <div class="divider"><span></span><i></i><span></span></div>
+      <div class="steps">
+        <div class="step"><h3>Send a request</h3><p>Tell us your date, event, and guest count.</p></div>
+        <div class="step"><h3>Get a quote</h3><p>We'll get back to you with availability and pricing.</p></div>
+        <div class="step"><h3>We show up and serve</h3><p>The truck rolls in and your guests eat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <section id="book">
+    <div class="wrap">
+      <h2>Book the Truck</h2>
+      <div class="divider"><span></span><i></i><span></span></div>
+      <p class="lead" style="margin-bottom:20px">Fill this out and we'll reach out to confirm.</p>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- TODO: paste the Web3Forms access key here -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="New catering request - Didi's Dogs">
+        <input type="hidden" name="from_name" value="Didi's Dogs Website">
+
+        <div class="row">
+          <label>Your name<input type="text" name="name" required></label>
+          <label>Phone<input type="tel" name="phone" required></label>
+        </div>
+        <label>Email<input type="email" name="email" required></label>
+        <div class="row">
+          <label>Event date<input type="date" name="event_date" required></label>
+          <label>Event type
+            <select name="event_type" required>
+              <option value="">Choose one</option>
+              <option>Wedding</option>
+              <option>Bar / Bat Mitzvah</option>
+              <option>Birthday</option>
+              <option>Corporate</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label>Number of guests<input type="number" name="guests" min="1" required></label>
+          <label>Event location (town)<input type="text" name="location" required></label>
+        </div>
+        <label>Anything else?<textarea name="message" rows="4"></textarea></label>
+        <button type="submit" class="btn">Send Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <div class="wrap">
+      <h2>Rather Call?</h2>
+      <div class="divider"><span></span><i></i><span></span></div>
+      <!-- TODO: replace with the real phone number and Instagram -->
+      <p>Call or text: <a href="tel:0000000000">(000) 000-0000</a></p>
+      <p>Instagram: <a href="#">@didisdogs</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="logo">Didi's Dogs</div>
+  <p>by Romanian · Kosher hot dog catering</p>
+  <p>© <span id="yr"></span> Didi's Dogs</p>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
