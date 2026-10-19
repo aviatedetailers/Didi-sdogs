@@ -33,7 +33,7 @@
 
   /* Hero */
   .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:var(--white);
-    background:linear-gradient(180deg,rgba(15,40,80,.15) 0%,rgba(15,40,80,.85) 100%),url("truck.jpg") center/cover no-repeat,var(--blue)}
+    background:radial-gradient(120% 90% at 80% 0%,#6fa3d8 0%,var(--blue) 40%,var(--blue-dark) 100%)}
   .hero .wrap{padding-bottom:48px;padding-top:48px}
   .hero .by{font-family:Lobster,cursive;font-size:1.4rem;color:#ffd9da}
   .hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3.2rem,12vw,6rem);line-height:.95;letter-spacing:1px}
@@ -87,9 +87,43 @@
   .contact a{color:var(--blue-dark);font-weight:700;text-decoration:none}
   footer{background:var(--ink);color:#c9cfdb;text-align:center;padding:28px 18px;font-size:.85rem}
   footer .logo{color:var(--white);font-size:1.4rem}
+
+  /* 3D intro */
+  #intro{position:relative;height:520vh;background:var(--cream)}
+  #intro .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+  #trailerCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .intro-text{position:absolute;left:0;right:0;text-align:center;padding:0 20px;pointer-events:none;transition:opacity .2s linear}
+  .intro-title{top:9vh}
+  .intro-title .name{font-family:Lobster,cursive;font-size:clamp(3rem,13vw,5.5rem);color:var(--blue-dark);line-height:1}
+  .intro-title .sub{font-family:"Bebas Neue",sans-serif;letter-spacing:3px;font-size:1.2rem;color:var(--red);margin-top:6px}
+  .intro-mid{top:10vh;opacity:0}
+  .intro-mid h2,.intro-end h2{font-size:clamp(2.2rem,9vw,3.6rem);color:var(--blue-dark)}
+  .intro-end{top:10vh;opacity:0}
+  .scroll-hint{position:absolute;bottom:5vh;left:0;right:0;text-align:center;font-weight:700;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--blue-dark);pointer-events:none}
+  .scroll-hint .arrow{display:block;font-size:1.4rem;animation:bob 1.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+  .skip{position:absolute;top:14px;right:14px;z-index:3;background:rgba(255,255,255,.85);color:var(--blue-dark);font-weight:700;font-size:.8rem;text-decoration:none;padding:8px 14px;border-radius:999px}
+  .fade{position:absolute;inset:0;background:var(--blue-dark);opacity:0;pointer-events:none}
+  #intro.nogl{display:none}
 </style>
 </head>
 <body>
+
+<!-- 3D scroll intro: walk around the trailer, then zoom through the service window -->
+<section id="intro" aria-label="Didi's Dogs trailer">
+  <div class="stage">
+    <canvas id="trailerCanvas"></canvas>
+    <a href="#top" class="skip">Skip intro ↓</a>
+    <div class="intro-text intro-title" id="tTitle">
+      <div class="name">Didi's Dogs</div>
+      <div class="sub">by Romanian · Kosher Catering</div>
+    </div>
+    <div class="intro-text intro-mid" id="tMid"><h2>We Bring The Truck</h2></div>
+    <div class="intro-text intro-end" id="tEnd"><h2>Step Up To The Window</h2></div>
+    <div class="scroll-hint" id="tHint">Scroll<span class="arrow">↓</span></div>
+    <div class="fade" id="tFade"></div>
+  </div>
+</section>
 
 <header>
   <div class="wrap nav">
@@ -225,5 +259,7 @@
 </footer>
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="three.min.js"></script>
+<script src="trailer.js"></script>
 </body>
 </html>
