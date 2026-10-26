@@ -63,17 +63,26 @@
   .hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
   .hero-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(15,90,147,.45)}
   .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
-  .badge{position:absolute;left:14px;bottom:14px;background:var(--white);color:var(--blue);font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
 
   section{padding:60px 0}
   h2.block{font-size:clamp(2.4rem,9vw,3.3rem)}
 
   /* Events */
-  .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-  .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
-  .card .ico{width:44px;height:44px;border-radius:12px;background:var(--cream-2);display:grid;place-items:center;font-size:1.4rem;margin-bottom:10px}
-  .card h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.6rem;color:var(--blue);letter-spacing:.5px;line-height:1}
-  .card p{color:var(--muted);font-size:.92rem;margin-top:6px}
+  .events{list-style:none;border-top:2px solid var(--blue)}
+  @media(min-width:860px){.events{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}}
+  .events li{display:grid;grid-template-columns:52px 1fr;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+  .events .num{font-family:"Bebas Neue",sans-serif;font-size:1.3rem;color:var(--red);letter-spacing:1px}
+  .events h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2rem;color:var(--blue);letter-spacing:.5px;line-height:1}
+  .events p{color:var(--muted);font-size:.92rem;margin-top:6px}
+  .lead-in{max-width:560px;color:var(--muted);margin:-8px 0 26px}
+
+  /* steps */
+  .steps{display:grid;gap:26px;counter-reset:s}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{position:relative;padding-top:6px}
+  .step::before{counter-increment:s;content:counter(s);display:block;font-family:"Bebas Neue",sans-serif;font-size:5rem;line-height:.8;color:transparent;-webkit-text-stroke:2px var(--sky);margin-bottom:10px}
+  .step h3{font-weight:800;font-size:1.05rem;color:var(--ink)}
+  .step p{color:var(--muted);font-size:.92rem;margin-top:4px}
 
   /* Kosher band */
   .band{background:var(--blue);color:var(--white)}
@@ -160,7 +169,7 @@
         <span class="script">Didi's Dogs</span>
         <div class="by">by Romanian</div>
         <h1 class="block">The Romanian Hot Dog Trailer, At Your Event</h1>
-        <p class="caps">Kosher catering for weddings, bar &amp; bat mitzvahs, birthdays and private parties.</p>
+        <p class="caps">Kosher hot dog catering for weddings, bar &amp; bat mitzvahs and private parties.</p>
         <div class="ctas">
           <a href="#book" class="pill red">Check Dates</a>
           <a href="#contact" class="pill ghost">Call Us</a>
@@ -168,7 +177,6 @@
       </div>
       <div class="hero-photo">
         <img src="trailer-event.jpg" alt="The Didi's Dogs chrome trailer serving at an event" width="945" height="704">
-        <span class="badge">✡ Kosher</span>
       </div>
     </div>
   </section>
@@ -176,14 +184,15 @@
   <!-- Events -->
   <section>
     <div class="wrap">
-      <h2 class="block">We Cater</h2>
+      <h2 class="block">Private Events Only</h2>
       <div class="rule"><i></i></div>
-      <div class="events">
-        <div class="card"><div class="ico">💍</div><h3>Weddings</h3><p>The late-night snack everyone talks about the next day.</p></div>
-        <div class="card"><div class="ico">🎉</div><h3>Bar &amp; Bat Mitzvahs</h3><p>Kids and grown-ups both line up for this one.</p></div>
-        <div class="card"><div class="ico">🎂</div><h3>Birthdays</h3><p>Backyard parties to big milestone celebrations.</p></div>
-        <div class="card"><div class="ico">🏢</div><h3>Shul, School &amp; Office</h3><p>Community events, fundraisers and company lunches.</p></div>
-      </div>
+      <p class="lead-in">You won't find us parked on a corner. The trailer comes to you, sets up, and serves your guests.</p>
+      <ol class="events">
+        <li><span class="num">01</span><div><h3>Weddings</h3><p>The late-night snack everyone talks about the next day.</p></div></li>
+        <li><span class="num">02</span><div><h3>Bar &amp; Bat Mitzvahs</h3><p>Kids and grown-ups both line up for this one.</p></div></li>
+        <li><span class="num">03</span><div><h3>Birthdays</h3><p>Backyard parties to big milestone celebrations.</p></div></li>
+        <li><span class="num">04</span><div><h3>Shul, School &amp; Office</h3><p>Community events, fundraisers and company lunches.</p></div></li>
+      </ol>
     </div>
   </section>
 
@@ -224,6 +233,19 @@
         <div class="item"><h3>Drinks</h3><p>Details coming soon.</p></div>
       </div>
       <p class="note">Pricing depends on your guest count and event. Pick a date below and we'll send you a quote.</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2 class="block">How Booking Works</h2>
+      <div class="rule"><i></i></div>
+      <div class="steps">
+        <div class="step"><h3>Pick your date</h3><p>Check the calendar for an open day and send us your event details.</p></div>
+        <div class="step"><h3>Get your quote</h3><p>We'll reach out with pricing based on your guest count and location.</p></div>
+        <div class="step"><h3>We pull up and serve</h3><p>The trailer arrives, sets up, and your guests line up at the window.</p></div>
+      </div>
     </div>
   </section>
 
