@@ -2,324 +2,334 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Didi's Dogs | Romanian Kosher Hot Dog Catering</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Didi's Dogs | Kosher Hot Dog Trailer Catering by Romanian</title>
 <meta name="description" content="Didi's Dogs by Romanian. Kosher hot dog trailer catering for private events of any size.">
 <meta name="theme-color" content="#F7F3E8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@125,700;125,800&family=Courier+Prime:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
 <style>
-  /* Colors sampled from Romanian's own posts and site */
+  /* Palette sampled from romaniankosher.com */
   :root{
-    --cream:#fcf7f1;
-    --cream-2:#f7f3e8;
-    --sky:#5d93c3;        /* script "Romanian" blue */
-    --blue:#1470b3;       /* block headline blue */
-    --blue-deep:#0f5a93;
-    --maroon:#8f434d;     /* spaced caps body text */
-    --red:#c43730;        /* "Chicago" script red */
-    --ink:#1f2a37;
-    --muted:#6b7380;
-    --line:#e7dfd1;
-    --white:#fff;
+    --bg:#f7f3e8;        /* page */
+    --tan:#ede2cc;       /* hero panel, bottom bar */
+    --card:#f0e9d7;      /* product cards */
+    --blue:#149ad7;      /* logo, hero type, banner */
+    --blue-deep:#116e9a; /* product names */
+    --navy:#193b57;      /* buttons, icons */
+    --red:#9a2f2f;       /* section titles, arrows, rules */
+    --red-hot:#b8262b;   /* script sticker */
+    --placeholder:#d6bf9a;
+    --ink:#1f2630;
+    --mono:"Courier Prime","Courier New",monospace;
+    --wide:"Archivo",system-ui,sans-serif;
+    --logo:"Anton","Bebas Neue",Impact,sans-serif;
+    --bar:74px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:Montserrat,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-  img{max-width:100%;height:auto;display:block}
-  a{color:inherit}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+  html{scroll-behavior:smooth;scroll-padding-top:12px}
+  body{background:var(--bg);color:var(--ink);font-family:var(--mono);line-height:1.5;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+  .wide{font-family:var(--wide);font-stretch:125%;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
 
-  .script{font-family:Lobster,cursive;color:var(--sky);font-weight:400}
-  .block{font-family:"Bebas Neue",Impact,sans-serif;color:var(--blue);letter-spacing:1px;line-height:.95;font-weight:400}
-  .caps{text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--maroon);font-size:.82rem}
+  /* ---------- logo header ---------- */
+  .top{padding:10px 12px 22px;text-align:center}
+  .top-row{display:flex;justify-content:flex-end}
+  .icon-btn{width:44px;height:44px;display:grid;place-items:center;color:var(--navy)}
+  .icon-btn svg{width:26px;height:26px}
+  .logo{display:inline-block;color:var(--blue);margin-top:4px}
+  .logo .word{white-space:nowrap;font-family:var(--logo);font-size:clamp(2.8rem,14vw,6.4rem);line-height:.92;letter-spacing:.5px;text-transform:uppercase;display:block;transform:scaleY(1.08)}
+  .logo .sub{display:block;font-family:var(--wide);font-stretch:125%;font-weight:800;font-size:.8rem;letter-spacing:.22em;margin-top:8px;text-transform:uppercase}
 
-  /* divider: line, blue dot, line (like their posts) */
-  .rule{display:flex;align-items:center;gap:12px;margin:12px 0 20px}
-  .rule::before,.rule::after{content:"";height:2px;flex:0 0 70px;background:var(--sky)}
-  .rule i{width:14px;height:14px;border-radius:50%;background:var(--blue)}
-  .center{text-align:center}
-  .center .rule{justify-content:center}
+  /* ---------- hero: split panel ---------- */
+  .hero{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;background:var(--tan);min-height:420px}
+  .hero-text{position:relative;padding:44px 18px 30px 20px;display:flex;flex-direction:column;justify-content:center}
+  .hero h1{color:var(--blue);font-size:clamp(2rem,9.4vw,4.6rem)}
+  .sticker{position:absolute;right:-70px;bottom:-56px;transform:rotate(-8deg);width:150px;pointer-events:none;z-index:3}
+  .btn-outline{display:inline-block;margin-top:28px;align-self:flex-start;border:3px solid var(--navy);color:var(--navy);border-radius:999px;padding:10px 20px;font-family:var(--mono);font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;background:transparent;white-space:nowrap}
+  .btn-outline:hover{background:var(--navy);color:var(--tan)}
+  .hero-photo{position:relative;overflow:hidden}
+  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  @media(min-width:900px){
+    .hero{min-height:560px}
+    .hero-text{padding:60px 60px 60px max(40px,calc((100vw - 1100px)/2 + 18px))}
+    .sticker{width:210px;right:-105px;bottom:-70px}
+  }
 
-  /* Header */
-  header{position:sticky;top:0;z-index:20;background:rgba(252,247,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:62px}
-  .brand{text-decoration:none;display:flex;align-items:baseline;gap:6px}
-  .brand .script{font-size:1.75rem;color:var(--blue)}
-  .brand small{font-family:Lobster,cursive;color:var(--red);font-size:.95rem}
-  .pill{display:inline-block;background:var(--blue);color:var(--white);text-decoration:none;font-weight:700;padding:10px 18px;border-radius:999px;font-size:.85rem;border:0;cursor:pointer;font-family:inherit}
-  .pill.red{background:var(--red)}
-  .pill.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue)}
+  /* ---------- blue banner ---------- */
+  .banner{background:var(--blue);color:var(--bg);text-align:center;padding:76px 22px 64px}
+  .banner p{font-size:clamp(1.35rem,5.6vw,2.4rem);max-width:820px;margin:0 auto;letter-spacing:.04em;line-height:1.25}
 
-  /* Hero */
-  .hero{padding:22px 0 6px}
-  .hero-grid{display:grid;gap:20px;align-items:center}
-  @media(min-width:860px){.hero-grid{grid-template-columns:1fr 1.15fr}}
-  .hero .script{font-size:clamp(3.2rem,14vw,6.2rem);line-height:.9;display:block}
-  .hero .by{font-family:Lobster,cursive;color:var(--red);font-size:1.4rem;margin:2px 0 10px}
-  .hero h1{font-size:clamp(2.1rem,8vw,3.2rem);margin-bottom:10px}
-  .hero p.caps{line-height:1.8}
-  .hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-  .hero-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(15,90,147,.45)}
-  .hero-photo img{width:100%;aspect-ratio:16/10;object-fit:cover}
-
+  /* ---------- section title: red mono + rule + arrows ---------- */
   section{padding:44px 0}
-  @media(min-width:860px){section{padding:64px 0}}
-  h2.block{font-size:clamp(2.4rem,9vw,3.3rem)}
+  .sec-head{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+  .sec-head h2{font-family:var(--mono);font-weight:700;color:var(--red);font-size:clamp(1.6rem,7vw,2.3rem);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;line-height:1}
+  .sec-head .rule{flex:1;height:2px;background:var(--red)}
+  .arrows{display:flex;gap:16px}
+  .arrows button{background:none;border:0;cursor:pointer;color:var(--red);width:26px;height:26px;display:grid;place-items:center}
+  .arrows button:disabled{opacity:.3;cursor:default}
+  .arrows svg{width:20px;height:20px}
+  .note{color:var(--blue-deep);font-size:1rem;max-width:620px;margin-top:18px}
 
-  .lead-in{max-width:560px;color:var(--muted);margin:-6px 0 0;font-size:1.05rem}
+  /* ---------- carousels (like their product rows) ---------- */
+  .rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 7px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+  .rail::-webkit-scrollbar{display:none}
+  @media(min-width:900px){.rail{grid-auto-columns:calc(25% - 11px)}}
+  .tile{scroll-snap-align:start;background:var(--card);padding:16px 16px 18px;display:flex;flex-direction:column}
+  .tile .ph{aspect-ratio:9/10;overflow:hidden;background:#e4d9c2}
+  .tile .ph img{width:100%;height:100%;object-fit:cover}
+  .tile h3{font-family:var(--mono);font-weight:400;color:var(--blue-deep);font-size:1.3rem;line-height:1.15;text-transform:uppercase;margin-top:16px}
+  .tile .meta{font-family:var(--mono);font-weight:700;color:var(--blue);font-size:1rem;margin-top:8px;text-transform:uppercase}
+  .tile .plus{margin-top:auto;align-self:flex-end;width:40px;height:40px;border:2px solid var(--red);border-radius:50%;color:var(--red);display:grid;place-items:center;font-size:1.6rem;line-height:1}
+  .tile.text-only .ph{display:grid;place-items:center;color:var(--placeholder);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .tile.text-only .meta{margin-bottom:16px}
 
-  /* Steps: one compact row */
-  .steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
-  .steps li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:center}
-  .steps .n{display:block;font-family:"Bebas Neue",sans-serif;font-size:2rem;line-height:1;color:var(--sky)}
-  .steps b{display:block;font-size:.8rem;line-height:1.3;margin-top:4px}
+  /* ---------- steps ---------- */
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+  .steps li{background:var(--card);padding:16px 8px;text-align:center}
+  .steps .n{display:block;font-family:var(--wide);font-stretch:125%;font-weight:800;color:var(--blue);font-size:2rem;line-height:1}
+  .steps b{display:block;font-size:.85rem;line-height:1.25;margin-top:8px;color:var(--navy);text-transform:uppercase}
 
-  /* Kosher band */
-  .band{background:var(--blue);color:var(--white)}
-  .band .block{color:var(--white)}
-  .band .rule::before,.band .rule::after{background:rgba(255,255,255,.55)}
-  .band .rule i{background:var(--white)}
-  .band p{max-width:640px;margin:0 auto;opacity:.95}
-  .band .caps{color:#ede9d1}
-
-  /* Gallery */
-  .gallery{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-  .gallery img{width:100%;height:auto;object-fit:cover;border-radius:16px;aspect-ratio:4/3}
-  .gallery .wide{grid-column:1/-1;aspect-ratio:16/8}
-
-  /* Menu */
-  .menu{display:grid;gap:12px}
-  @media(min-width:700px){.menu{grid-template-columns:1fr 1fr}}
-  .item{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--red);border-radius:14px;padding:16px 18px}
-  .item h3{font-weight:800;font-size:1rem}
-  .item p{color:var(--muted);font-size:.9rem}
-  .note{color:var(--muted);font-size:.9rem;margin-top:14px}
-
-  /* Booking */
-  .book-grid{display:grid;gap:18px}
+  /* ---------- calendar ---------- */
+  .book-grid{display:grid;gap:16px}
   @media(min-width:900px){.book-grid{grid-template-columns:1fr 1fr;align-items:start}}
-  .cal{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:18px}
-  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-  .cal-head .block{font-size:2rem}
-  .cal-btn{width:40px;height:40px;border-radius:50%;border:2px solid var(--line);background:var(--cream);color:var(--blue);font-size:1.2rem;font-weight:800;cursor:pointer}
-  .cal-btn:disabled{opacity:.35;cursor:default}
+  .cal{background:var(--card);padding:18px}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .cal-head .month{font-family:var(--wide);font-stretch:125%;font-weight:800;color:var(--blue);text-transform:uppercase;font-size:1.2rem}
   .dow,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
-  .dow span{font-size:.7rem;font-weight:800;letter-spacing:.08em;color:var(--maroon);padding:4px 0}
-  .day{aspect-ratio:1;border-radius:12px;border:0;background:var(--cream);font:inherit;font-weight:700;font-size:.95rem;color:var(--ink);cursor:pointer;position:relative}
-  .day:hover:not(:disabled){background:#e3eef8}
+  .dow span{font-weight:700;color:var(--red);font-size:.85rem;padding:2px 0}
+  .day{aspect-ratio:1;border:0;background:var(--bg);font-family:var(--mono);font-weight:700;font-size:1rem;color:var(--navy);cursor:pointer;border-radius:50%}
+  .day:hover:not(:disabled){background:#fff}
   .day.empty{background:transparent;cursor:default}
-  .day:disabled{color:#c3bfb6;background:transparent;cursor:default}
-  .day.booked{background:#f3e3e3;color:var(--maroon);text-decoration:line-through}
-  .day.today{box-shadow:inset 0 0 0 2px var(--sky)}
-  .day.sel{background:var(--blue);color:var(--white)}
-  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:.78rem;color:var(--muted)}
-  .legend b{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
-  .picked{margin-top:12px;font-weight:700;color:var(--blue)}
+  .day:disabled{background:transparent;color:#c9bda6;cursor:default}
+  .day.booked{color:var(--red);text-decoration:line-through;opacity:.6}
+  .day.today{box-shadow:inset 0 0 0 2px var(--blue)}
+  .day.sel{background:var(--navy);color:var(--tan)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.85rem;color:var(--blue-deep);text-transform:uppercase}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+  .picked{margin-top:12px;color:var(--navy);font-weight:700}
 
-  form{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;gap:14px}
-  label{font-weight:700;font-size:.85rem;display:grid;gap:6px}
-  input,select,textarea{font:inherit;font-weight:500;padding:12px;border:1px solid #d9d1c2;border-radius:12px;background:var(--cream);width:100%;color:var(--ink)}
-  input:focus,select:focus,textarea:focus{outline:2px solid var(--sky);border-color:var(--sky)}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form{background:var(--card);padding:18px;display:grid;gap:12px}
+  .field{display:grid;gap:6px}
+  .field > span{font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+  input,select,textarea{font-family:var(--mono);font-size:1rem;color:var(--ink);background:#fff;border:0;border-radius:999px;padding:14px 20px;width:100%;box-shadow:inset 0 0 0 1px #e3d7bd}
+  textarea{border-radius:22px;resize:vertical}
+  select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--navy) 50%),linear-gradient(135deg,var(--navy) 50%,transparent 50%);background-position:calc(100% - 24px) 50%,calc(100% - 18px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+  ::placeholder{color:var(--placeholder);letter-spacing:.08em;text-transform:uppercase}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--blue)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   @media(max-width:520px){.row{grid-template-columns:1fr}}
-  .date-show{padding:12px;border-radius:12px;background:var(--cream-2);font-weight:700;color:var(--blue)}
-  .date-show.empty{color:var(--muted);font-weight:500}
-  .form-msg{font-weight:700;font-size:.9rem}
+  .date-show{background:#fff;border-radius:999px;padding:14px 20px;font-weight:700;color:var(--navy);box-shadow:inset 0 0 0 1px #e3d7bd}
+  .date-show.empty{color:var(--placeholder);font-weight:400;letter-spacing:.08em;text-transform:uppercase}
+  .btn-solid{background:var(--navy);color:var(--tan);border:0;border-radius:999px;padding:16px;font-family:var(--mono);font-weight:700;font-size:1.1rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+  .btn-solid:disabled{opacity:.6}
+  .form-msg{font-weight:700}
 
-  /* Contact */
-  .contact-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:26px;text-align:center}
-  .contact-card .phone{font-family:"Bebas Neue",sans-serif;font-size:2.6rem;color:var(--blue);text-decoration:none;letter-spacing:1px}
-  .contact-card .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:14px}
+  /* ---------- footer ---------- */
+  footer{background:var(--tan);padding:44px 0 30px;text-align:center}
+  footer .logo .word{font-size:3.4rem}
+  .foot-links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 22px;margin:22px 0;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);font-weight:700}
+  .feed{color:var(--red);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:22px}
+  .socials{display:flex;justify-content:center;gap:14px;margin:12px 0 18px}
+  .socials a{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--tan);display:grid;place-items:center}
+  .socials svg{width:22px;height:22px}
+  .kosher-line{color:var(--blue-deep);font-size:.9rem;text-transform:uppercase;letter-spacing:.08em}
+  .copy{margin-top:18px;font-size:.8rem;letter-spacing:.1em;color:var(--navy);text-transform:uppercase}
 
-  footer{background:var(--blue-deep);color:#d7e4f1;text-align:center;padding:30px 18px;font-size:.85rem}
-  footer .script{color:var(--white);font-size:2rem}
-  footer .by{font-family:Lobster,cursive;color:#f2b7b3}
-
-  /* sticky book button on phones */
-  .mobile-book{position:fixed;left:16px;right:16px;bottom:14px;z-index:30;text-align:center;padding:15px;font-size:1rem;box-shadow:0 10px 24px -8px rgba(15,90,147,.6);transition:transform .25s,opacity .25s}
-  .mobile-book.hide{transform:translateY(120%);opacity:0}
-  @media(min-width:860px){.mobile-book{display:none}}
+  /* ---------- bottom app bar (like theirs) ---------- */
+  .appbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--tan);height:calc(var(--bar) + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);display:grid;grid-template-columns:repeat(5,1fr);align-items:end;isolation:isolate}
+  .appbar a{display:flex;flex-direction:column;align-items:center;gap:4px;padding-bottom:12px;color:var(--navy);font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+  .appbar svg{width:26px;height:26px}
+  .appbar .mid{position:relative}
+  .appbar .mid::before{content:"";position:absolute;top:-34px;left:50%;transform:translateX(-50%);width:94px;height:94px;border-radius:50%;background:var(--tan);z-index:-1}
+  .appbar .mid .round{width:62px;height:62px;border-radius:50%;background:var(--navy);color:var(--tan);display:grid;place-items:center;margin-top:-28px}
+  .appbar .mid .round svg{width:28px;height:28px}
+  @media(min-width:900px){.appbar{left:50%;right:auto;width:560px;transform:translateX(-50%);border-radius:24px 24px 0 0}}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a href="#top" class="brand"><span class="script">Didi's Dogs</span><small>by Romanian</small></a>
-    <a href="#book" class="pill">Book</a>
+<!-- Logo header -->
+<div class="top" id="top">
+  <div class="top-row">
+    <a href="#call" class="icon-btn" aria-label="Call">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    </a>
   </div>
-</header>
+  <a href="#top" class="logo" aria-label="Didi's Dogs by Romanian">
+    <span class="word">Didi's Dogs</span>
+    <span class="sub">By Romanian</span>
+  </a>
+</div>
 
-<main id="top">
+<!-- Hero -->
+<section class="hero" style="padding:0" aria-label="Intro">
+  <div class="hero-text">
+    <h1 class="wide">If you know, you know.</h1>
+    <svg class="sticker" viewBox="0 0 200 170" aria-hidden="true">
+      <defs><path id="arc" d="M40,84 A60,60 0 0 1 160,84"/></defs>
+      <circle cx="100" cy="98" r="72" fill="#ede2cc"/>
+      <circle cx="100" cy="98" r="65" fill="none" stroke="#b8262b" stroke-width="1.5" stroke-dasharray="3 4"/>
+      <text font-family="Courier Prime, monospace" font-weight="700" font-size="11" letter-spacing="2.5" fill="#b8262b"><textPath href="#arc" startOffset="50%" text-anchor="middle">IF YOU KNOW · YOU KNOW</textPath></text>
+      <text x="100" y="114" text-anchor="middle" font-family="Lobster, cursive" font-size="42" fill="#b8262b" stroke="#ede2cc" stroke-width="4" paint-order="stroke">Kosher</text>
+      <text x="104" y="146" text-anchor="middle" font-family="Lobster, cursive" font-size="27" fill="#b8262b" stroke="#ede2cc" stroke-width="4" paint-order="stroke">on wheels</text>
+    </svg>
+    <a href="#book" class="btn-outline">Check dates</a>
+  </div>
+  <div class="hero-photo">
+    <img src="trailer-event.jpg" alt="The Didi's Dogs chrome trailer serving at an event" width="945" height="704">
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="script">Didi's Dogs</span>
-        <div class="by">by Romanian</div>
-        <h1 class="block">The Romanian Hot Dog Trailer, At Your Event</h1>
-        <p class="caps">Kosher hot dog catering for private events.</p>
-        <div class="ctas">
-          <a href="#book" class="pill red">Check Dates</a>
-          <a href="#contact" class="pill ghost">Call Us</a>
+<!-- Banner -->
+<div class="banner">
+  <p class="wide">No event too big. The trailer comes to you.</p>
+</div>
+
+<!-- Booking -->
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head"><h2>Book the truck</h2><span class="rule"></span></div>
+
+    <ol class="steps" aria-label="How booking works">
+      <li><span class="n">1</span><b>Pick your date</b></li>
+      <li><span class="n">2</span><b>Get your quote</b></li>
+      <li><span class="n">3</span><b>We pull up &amp; serve</b></li>
+    </ol>
+
+    <div class="book-grid">
+      <div class="cal" aria-label="Booking calendar">
+        <div class="cal-head">
+          <div class="arrows"><button id="prev" aria-label="Previous month"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M15 2 4 10l11 8z"/></svg></button></div>
+          <div class="month" id="monthLabel"></div>
+          <div class="arrows"><button id="next" aria-label="Next month"><svg viewBox="0 0 20 20" fill="currentColor"><path d="m5 2 11 8-11 8z"/></svg></button></div>
         </div>
-      </div>
-      <div class="hero-photo">
-        <img src="trailer-event.jpg" alt="The Didi's Dogs chrome trailer serving at an event" width="945" height="704">
-      </div>
-    </div>
-  </section>
-
-  <!-- Events -->
-  <section>
-    <div class="wrap">
-      <h2 class="block">No Event Too Big.</h2>
-      <div class="rule"><i></i></div>
-      <p class="lead-in">Backyard party or full-blown wedding, the trailer comes to you, sets up, and serves your guests.</p>
-      <ol class="steps" aria-label="How booking works">
-        <li><span class="n">1</span><b>Pick your date</b></li>
-        <li><span class="n">2</span><b>Get your quote</b></li>
-        <li><span class="n">3</span><b>We pull up &amp; serve</b></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Booking calendar + form -->
-  <section id="book" style="background:var(--cream-2)">
-    <div class="wrap">
-      <h2 class="block">Check Availability</h2>
-      <div class="rule"><i></i></div>
-      <div class="book-grid">
-
-        <div class="cal" aria-label="Booking calendar">
-          <div class="cal-head">
-            <button class="cal-btn" id="prev" aria-label="Previous month">‹</button>
-            <div class="block" id="monthLabel"></div>
-            <button class="cal-btn" id="next" aria-label="Next month">›</button>
-          </div>
-          <div class="dow"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
-          <div class="days" id="days"></div>
-          <div class="legend">
-            <span><b style="background:var(--cream);border:1px solid var(--line)"></b>Open</span>
-            <span><b style="background:#f3e3e3"></b>Booked</span>
-            <span><b style="background:var(--blue)"></b>Your date</span>
-          </div>
-          <div class="picked" id="picked">Tap a date to start.</div>
+        <div class="dow"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+        <div class="days" id="days"></div>
+        <div class="legend">
+          <span><i style="background:var(--bg)"></i>Open</span>
+          <span><i style="background:var(--red);opacity:.6"></i>Booked</span>
+          <span><i style="background:var(--navy)"></i>Your date</span>
         </div>
-
-        <form id="bookForm" action="https://api.web3forms.com/submit" method="POST">
-          <!-- TODO: paste the Web3Forms access key here -->
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-          <input type="hidden" name="subject" value="New catering request - Didi's Dogs">
-          <input type="hidden" name="from_name" value="Didi's Dogs Website">
-          <input type="hidden" name="event_date" id="eventDate">
-
-          <div>
-            <div class="caps" style="margin-bottom:6px">Event date</div>
-            <div class="date-show empty" id="dateShow">Pick a date on the calendar</div>
-          </div>
-          <div class="row">
-            <label>Your name<input type="text" name="name" autocomplete="name" required></label>
-            <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
-          </div>
-          <label>Email<input type="email" name="email" autocomplete="email" required></label>
-          <div class="row">
-            <label>Event type
-              <select name="event_type" required>
-                <option value="">Choose one</option>
-                <option>Wedding</option>
-                <option>Bar / Bat Mitzvah</option>
-                <option>Birthday</option>
-                <option>Shul / School / Community</option>
-                <option>Corporate</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label>Start time<input type="time" name="start_time"></label>
-          </div>
-          <div class="row">
-            <label>Number of guests<input type="number" name="guests" min="1" inputmode="numeric" required></label>
-            <label>Event town<input type="text" name="location" required></label>
-          </div>
-          <label>Anything else?<textarea name="message" rows="3"></textarea></label>
-          <button type="submit" class="pill red" style="padding:15px;font-size:1rem">Send Request</button>
-          <div class="form-msg" id="formMsg" role="status"></div>
-        </form>
-
+        <div class="picked" id="picked">Tap a date to start.</div>
       </div>
-    </div>
-  </section>
 
-  <!-- Kosher -->
-  <section class="band center">
-    <div class="wrap">
-      <h2 class="block">If You Know, You Know.</h2>
-      <div class="rule"><i></i></div>
-      <!-- TODO: confirm the certifying agency for the trailer -->
-      <p class="caps" style="margin-bottom:12px">100% Kosher · [Kosher agency]</p>
-      <p>Romanian's hot dogs and sausages, made in Chicago and served hot off the trailer.</p>
-    </div>
-  </section>
+      <form id="bookForm" action="https://api.web3forms.com/submit" method="POST">
+        <!-- TODO: paste the Web3Forms access key here -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="New catering request - Didi's Dogs">
+        <input type="hidden" name="from_name" value="Didi's Dogs Website">
+        <input type="hidden" name="event_date" id="eventDate">
 
-  <!-- Gallery -->
-  <section>
-    <div class="wrap">
-      <h2 class="block">The Trailer</h2>
-      <div class="rule"><i></i></div>
-      <div class="gallery">
-        <img class="wide" src="trailer-side.jpg" alt="Side view of the chrome Didi's Dogs trailer" width="1080" height="860">
-        <img src="trailer-event.jpg" alt="The trailer set up with tables at an event" width="945" height="704">
-        <img src="trailer-city.jpg" alt="The trailer serving on a city rooftop" width="945" height="528">
-      </div>
-    </div>
-  </section>
-
-  <!-- Menu (placeholder) -->
-  <section id="menu">
-    <div class="wrap">
-      <h2 class="block">The Menu</h2>
-      <div class="rule"><i></i></div>
-      <!-- TODO: replace with the real menu -->
-      <div class="menu">
-        <div class="item"><h3>Classic Romanian Dog</h3><p>Details coming soon.</p></div>
-        <div class="item"><h3>Specialty Dogs</h3><p>Details coming soon.</p></div>
-        <div class="item"><h3>Sides</h3><p>Details coming soon.</p></div>
-        <div class="item"><h3>Drinks</h3><p>Details coming soon.</p></div>
-      </div>
-      <p class="note">Pricing depends on your guest count and event. <a href="#book" style="color:var(--blue);font-weight:700">Pick a date</a> and we'll send you a quote.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="wrap">
-      <div class="contact-card">
-        <h2 class="block">Rather Talk?</h2>
-        <div class="rule" style="justify-content:center"><i></i></div>
-        <!-- TODO: real phone number -->
-        <a class="phone" href="tel:0000000000">(000) 000-0000</a>
-        <div class="ctas">
-          <a class="pill" href="tel:0000000000">Call</a>
-          <a class="pill ghost" href="sms:0000000000">Text</a>
-          <a class="pill ghost" href="https://www.instagram.com/romaniankosher/" target="_blank" rel="noopener">Instagram</a>
+        <div class="field"><span>Event date</span><div class="date-show empty" id="dateShow">Pick a date above</div></div>
+        <div class="row">
+          <label class="field"><span>Name</span><input type="text" name="name" placeholder="Your name" autocomplete="name" required></label>
+          <label class="field"><span>Phone</span><input type="tel" name="phone" placeholder="Phone" autocomplete="tel" required></label>
         </div>
+        <label class="field"><span>Email</span><input type="email" name="email" placeholder="Email" autocomplete="email" required></label>
+        <div class="row">
+          <label class="field"><span>Event type</span>
+            <select name="event_type" required>
+              <option value="">Choose one</option>
+              <option>Wedding</option>
+              <option>Bar / Bat Mitzvah</option>
+              <option>Birthday</option>
+              <option>Private party</option>
+              <option>Shul / School / Community</option>
+              <option>Corporate</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="field"><span>Start time</span><input type="time" name="start_time"></label>
+        </div>
+        <div class="row">
+          <label class="field"><span>Guests</span><input type="number" name="guests" min="1" inputmode="numeric" placeholder="How many" required></label>
+          <label class="field"><span>Town</span><input type="text" name="location" placeholder="Event town" required></label>
+        </div>
+        <label class="field"><span>Anything else?</span><textarea name="message" rows="3" placeholder="Notes"></textarea></label>
+        <button type="submit" class="btn-solid">Send request</button>
+        <div class="form-msg" id="formMsg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- The trailer (carousel) -->
+<section id="trailer" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The trailer</h2><span class="rule"></span>
+      <div class="arrows" data-rail="railTrailer">
+        <button data-dir="-1" aria-label="Previous"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M15 2 4 10l11 8z"/></svg></button>
+        <button data-dir="1" aria-label="Next"><svg viewBox="0 0 20 20" fill="currentColor"><path d="m5 2 11 8-11 8z"/></svg></button>
       </div>
     </div>
-  </section>
+    <div class="rail" id="railTrailer">
+      <div class="tile"><div class="ph"><img src="trailer-side.jpg" alt="Side view of the chrome trailer" width="1080" height="860"></div><h3>Full chrome trailer</h3><div class="meta">Service window side</div></div>
+      <div class="tile"><div class="ph"><img src="trailer-event.jpg" alt="The trailer set up with tables at an event" width="945" height="704"></div><h3>Set up at your event</h3><div class="meta">Tables &amp; signage</div></div>
+      <div class="tile"><div class="ph"><img src="trailer-city.jpg" alt="The trailer serving on a city rooftop" width="945" height="528"></div><h3>We go anywhere</h3><div class="meta">Rooftops to backyards</div></div>
+    </div>
+  </div>
+</section>
 
-</main>
+<!-- Menu (carousel, placeholder) -->
+<section id="menu" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The menu</h2><span class="rule"></span>
+      <div class="arrows" data-rail="railMenu">
+        <button data-dir="-1" aria-label="Previous"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M15 2 4 10l11 8z"/></svg></button>
+        <button data-dir="1" aria-label="Next"><svg viewBox="0 0 20 20" fill="currentColor"><path d="m5 2 11 8-11 8z"/></svg></button>
+      </div>
+    </div>
+    <!-- TODO: replace with the real menu and photos -->
+    <div class="rail" id="railMenu">
+      <div class="tile text-only"><div class="ph">Photo soon</div><h3>Classic Romanian dog</h3><div class="meta">Coming soon</div><a href="#book" class="plus" aria-label="Book">+</a></div>
+      <div class="tile text-only"><div class="ph">Photo soon</div><h3>Specialty dogs</h3><div class="meta">Coming soon</div><a href="#book" class="plus" aria-label="Book">+</a></div>
+      <div class="tile text-only"><div class="ph">Photo soon</div><h3>Sides</h3><div class="meta">Coming soon</div><a href="#book" class="plus" aria-label="Book">+</a></div>
+      <div class="tile text-only"><div class="ph">Photo soon</div><h3>Drinks</h3><div class="meta">Coming soon</div><a href="#book" class="plus" aria-label="Book">+</a></div>
+    </div>
+    <p class="note">Pricing depends on guest count and location. Pick a date and we'll send a quote.</p>
+  </div>
+</section>
 
-<footer>
-  <div class="script">Didi's Dogs</div>
-  <div class="by">by Romanian</div>
-  <p style="margin-top:8px">Kosher hot dog trailer catering</p>
-  <p>© <span id="yr"></span> Didi's Dogs</p>
+<!-- Footer -->
+<footer id="call">
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="word">Didi's Dogs</span><span class="sub">By Romanian</span></a>
+    <!-- TODO: real phone number -->
+    <div class="foot-links">
+      <a href="tel:0000000000">(000) 000-0000</a>
+      <a href="#book">Book</a>
+      <a href="#menu">Menu</a>
+      <a href="https://romaniankosher.com/" target="_blank" rel="noopener">Romanian Kosher</a>
+    </div>
+    <!-- TODO: certifying agency -->
+    <div class="kosher-line">100% Kosher · [Kosher agency]</div>
+    <div class="feed">Feed your feed</div>
+    <div class="socials">
+      <a href="https://www.instagram.com/romaniankosher/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      <a href="sms:0000000000" aria-label="Text us">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z"/></svg>
+      </a>
+    </div>
+    <div class="copy">© <span id="yr"></span> Didi's Dogs. All rights reserved.</div>
+  </div>
 </footer>
 
-<a href="#book" class="pill red mobile-book" id="mobileBook">Check Dates</a>
+<!-- Bottom app bar -->
+<nav class="appbar" aria-label="Quick links">
+  <a href="#top"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 3 10v10a1 1 0 0 0 1 1h5v-6h6v6h5a1 1 0 0 0 1-1V10z"/></svg>Home</a>
+  <a href="#trailer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 7a3 3 0 0 1 3-3h10a5 5 0 0 1 5 5v6a1 1 0 0 1-1 1h-1.2a2.8 2.8 0 0 0-5.6 0H9.8a2.8 2.8 0 0 0-5.6 0H4a1 1 0 0 1-1-1zm3 1v4h5V8zm7 0v4h5V9.5A1.5 1.5 0 0 0 16.5 8zM7 17.8a1.8 1.8 0 1 1 0-.1zm9 0a1.8 1.8 0 1 1 0-.1z"/></svg>Trailer</a>
+  <a href="#book" class="mid" aria-label="Book a date"><span class="round"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h2v2h6V2h2v2h2a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2zm-2 8v9h14v-9z"/></svg></span>Book</a>
+  <a href="#menu"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/></svg>Menu</a>
+  <a href="tel:0000000000"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call</a>
+</nav>
 
 <script>
 /* ===== Booked dates =====
@@ -327,8 +337,6 @@
 var BOOKED = [
   // "2026-11-15",
 ];
-
-/* How far ahead people can book, in months */
 var MONTHS_AHEAD = 18;
 
 (function () {
@@ -338,7 +346,7 @@ var MONTHS_AHEAD = 18;
 
   var today = new Date(); today.setHours(0,0,0,0);
   var view = new Date(today.getFullYear(), today.getMonth(), 1);
-  var last = new Date(today.getFullYear(), today.getMonth() + MONTHS_AHEAD, 1);
+  var first = new Date(view), last = new Date(today.getFullYear(), today.getMonth() + MONTHS_AHEAD, 1);
   var selected = null;
 
   var daysEl = document.getElementById("days"), label = document.getElementById("monthLabel");
@@ -346,20 +354,17 @@ var MONTHS_AHEAD = 18;
   var picked = document.getElementById("picked"), dateShow = document.getElementById("dateShow");
   var eventDate = document.getElementById("eventDate");
 
-  function key(d) {
-    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
-  }
+  function pad(n) { return String(n).padStart(2, "0"); }
+  function key(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
   function pretty(d) { return DAYS[d.getDay()] + ", " + MONTHS[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear(); }
 
   function render() {
     label.textContent = MONTHS[view.getMonth()] + " " + view.getFullYear();
-    prev.disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
+    prev.disabled = view <= first;
     next.disabled = view >= last;
     daysEl.innerHTML = "";
-    var first = view.getDay(), count = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
-    for (var i = 0; i < first; i++) {
-      var e = document.createElement("span"); e.className = "day empty"; daysEl.appendChild(e);
-    }
+    var lead = view.getDay(), count = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+    for (var i = 0; i < lead; i++) { var e = document.createElement("span"); e.className = "day empty"; daysEl.appendChild(e); }
     for (var d = 1; d <= count; d++) {
       var date = new Date(view.getFullYear(), view.getMonth(), d), k = key(date);
       var b = document.createElement("button");
@@ -373,27 +378,43 @@ var MONTHS_AHEAD = 18;
       daysEl.appendChild(b);
     }
   }
-
   function choose(date) {
     selected = date;
     var text = pretty(date);
     eventDate.value = text;
-    picked.textContent = "✓ " + text + " is open. Fill out the form to request it.";
+    picked.textContent = "✓ " + text + " is open.";
     dateShow.textContent = text; dateShow.classList.remove("empty");
     render();
     if (window.innerWidth < 900) document.getElementById("bookForm").scrollIntoView({ behavior: "smooth", block: "start" });
   }
-
   prev.addEventListener("click", function () { view.setMonth(view.getMonth() - 1); render(); });
   next.addEventListener("click", function () { view.setMonth(view.getMonth() + 1); render(); });
   render();
+
+  /* carousel arrows */
+  document.querySelectorAll(".arrows[data-rail]").forEach(function (box) {
+    var rail = document.getElementById(box.getAttribute("data-rail"));
+    var btns = box.querySelectorAll("button");
+    function update() {
+      btns[0].disabled = rail.scrollLeft < 4;
+      btns[1].disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
+    }
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        rail.scrollBy({ left: +b.getAttribute("data-dir") * rail.clientWidth * 0.9, behavior: "smooth" });
+      });
+    });
+    rail.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
 
   /* send the form without leaving the page */
   var form = document.getElementById("bookForm"), msg = document.getElementById("formMsg");
   form.addEventListener("submit", function (ev) {
     ev.preventDefault();
     if (!eventDate.value) {
-      msg.style.color = "var(--red)"; msg.textContent = "Please pick a date on the calendar first.";
+      msg.style.color = "var(--red)"; msg.textContent = "Pick a date on the calendar first.";
       document.getElementById("book").scrollIntoView({ behavior: "smooth" });
       return;
     }
@@ -402,27 +423,15 @@ var MONTHS_AHEAD = 18;
     fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) })
       .then(function (r) { return r.json(); })
       .then(function (j) {
-        if (j.success) {
-          msg.style.color = "var(--blue)"; msg.textContent = "Got it! We'll reach out soon to confirm.";
-          form.reset(); eventDate.value = ""; selected = null; render();
-          dateShow.textContent = "Pick a date on the calendar"; dateShow.classList.add("empty");
-          picked.textContent = "Tap a date to start.";
-        } else { throw new Error(j.message || "error"); }
+        if (!j.success) throw new Error(j.message || "error");
+        msg.style.color = "var(--blue-deep)"; msg.textContent = "Got it! We'll reach out soon to confirm.";
+        form.reset(); eventDate.value = ""; selected = null; render();
+        dateShow.textContent = "Pick a date above"; dateShow.classList.add("empty");
+        picked.textContent = "Tap a date to start.";
       })
-      .catch(function () {
-        msg.style.color = "var(--red)"; msg.textContent = "Something went wrong. Please call or text us instead.";
-      })
-      .then(function () { btn.disabled = false; btn.textContent = "Send Request"; });
+      .catch(function () { msg.style.color = "var(--red)"; msg.textContent = "Something went wrong. Please call or text us instead."; })
+      .then(function () { btn.disabled = false; btn.textContent = "Send request"; });
   });
-
-  /* hide the floating button once the booking section is on screen */
-  var mb = document.getElementById("mobileBook");
-  if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (e) {
-      var any = e.some(function (x) { return x.isIntersecting; });
-      mb.classList.toggle("hide", any);
-    }, { threshold: 0.05 }).observe(document.getElementById("book"));
-  }
 
   document.getElementById("yr").textContent = new Date().getFullYear();
 })();
